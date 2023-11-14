@@ -11,6 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import Select
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get("http://p1wwebd08/lmsv2/auth/login")
@@ -24,19 +25,19 @@ if link:
 
 text_input = driver.find_element(By.ID, "employee")
 ActionChains(driver)\
-            .click_and_hold()\
-            .pause(1)\
-            .send_keys_to_element(text_input, "JMOYA")\
-            .perform()
+        .click_and_hold()\
+        .pause(1)\
+        .send_keys_to_element(text_input, "JMOYA")\
+        .perform()
 
 text_input = driver.find_element(By.ID, "password")
 ActionChains(driver)\
-            .click_and_hold()\
-            .pause(1)\
-            .send_keys_to_element(text_input, "Ciana052497!3")\
-            .perform()
+        .click_and_hold()\
+        .pause(1)\
+        .send_keys_to_element(text_input, "Ciana052497!3")\
+        .perform()
 
-    # Interact with the file here
+# Interact with the file here
 driver.close()
-    # Close the file window
+# Close the file window
 
