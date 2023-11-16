@@ -57,7 +57,7 @@ try:
     driver.find_element(By.NAME, "course_description").click()
     driver.find_element(By.ID, "course_description").send_keys("test on python webdrivers")
     time.sleep(2)
-    #driver.find_element(By.CLASS_NAME, "checkmark").click()
-    #time.sleep(2)
+    EC.element_to_be_clickable((By.CLASS_NAME, "checkmark"))
+    time.sleep(1)
 finally:
     time.sleep(100)
