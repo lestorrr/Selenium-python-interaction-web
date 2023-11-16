@@ -13,17 +13,22 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import Select
 
-#chrome malala
+
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
-#link mong malala
-driver.get("HTTP LINK MO LODS")
+
+driver.get("http://p1wwebd08/lmsv2/auth/login")
 
 
 #<input type="text" name="passwd" id="passwd-id" />    👈 ETO LALAGAY EH AYAW PADEN HAHAHA
 
-element = driver.find_element(By.ID, "passwd-id")
-element = driver.find_element(By.NAME, "passwd")
-element = driver.find_element(By.XPATH, "//input[@id='passwd-id']")
-element = driver.find_element(By.CSS_SELECTOR, "input#passwd-id")
+element = driver.find_element(By.ID, "employee_number")
+element = driver.find_element(By.NAME, "employee_number")
+element = driver.find_element(By.XPATH, "//input[@id='employee_number']")
+element = driver.find_element(By.CSS_SELECTOR, "input#employee_number")
 
+
+element.send_keys("JMOYA")
+element.clear()
+
+time.sleep(20)

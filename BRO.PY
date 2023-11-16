@@ -18,11 +18,10 @@ driver.get("http://p1wwebd08/lmsv2/auth/login")
 driver.maximize_window()
 driver.refresh()
 
-link = driver.find_element(By.XPATH, "//a[contains(@href, 'files/index.html')]")
 
-if link:
-        driver.execute_script("window.open('http://p1wwebd08/lmsv2/auth/login#frmActiveDirectory');")
 
+
+first_name = driver.find_element(By.CSS_SELECTOR,'#active_directory')
 text_input = driver.find_element(By.ID, "employee")
 ActionChains(driver)\
         .click_and_hold()\
@@ -37,7 +36,7 @@ ActionChains(driver)\
         .send_keys_to_element(text_input, "Ciana052497!3")\
         .perform()
 
-# Interact with the file here
+time.sleep(20)
 driver.close()
 # Close the file window
 
