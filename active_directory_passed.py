@@ -32,7 +32,7 @@ try:
     password_field.send_keys("Ciana052497!3")
 
     submit_button = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
+    EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
     )
     submit_button.click()
 driver.get("http://p1wwebd08/lmsv2/course/home")
@@ -51,11 +51,9 @@ for link in link:
             element = driver.find_element(By.CSS_SELECTOR, "input#employee_number")
             link.click()
             time.sleep(40)
-    # Navigate back to the previous page
-time.sleep(40)
 
-logout_link = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.LINK_TEXT, "Logout"))
+            logout_link = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.LINK_TEXT, "Logout"))
     )
 
 
