@@ -21,7 +21,7 @@ element = WebDriverWait(driver, 5).until(
     EC.presence_of_element_located((By.ID, "active_directory"))
 )
 element.click()
-
+#admin user at pass
 try:
     username_field = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.ID, "ademployee"))
@@ -39,19 +39,14 @@ try:
     time.sleep(2)
     driver.get("http://p1wwebd08/lmsv2/course/home")
     link = driver.find_elements(By.XPATH, "//a[@href]")
-
     for link in link:
         if "files" in link.get_attribute("innerHTML"):
             driver.execute_script("window.open('http://p1wwebd08/lmsv2/course/home');")
     submit_button = WebDriverWait(driver, 10).until
     EC.element_to_be_clickable((By.CLASS_NAME, "active"))
     time.sleep(1)
-
-
 #LINK SA ADD COURSE
     driver.get("http://p1wwebd08/lmsv2/course/add")
-
-
 #CREATE COURSE EYYYYYY WANANANENG
     driver.find_element(By.NAME, "course_title").click()
     driver.find_element(By.ID, "course_title").send_keys("automated in python")
@@ -62,9 +57,7 @@ try:
     driver.find_element(By.NAME, "course_description").click()
     driver.find_element(By.ID, "course_description").send_keys("test on python webdrivers")
     time.sleep(2)
-    driver.find_element(By.NAME, "container")
-    time.sleep(2)
-
-
+    #driver.find_element(By.CLASS_NAME, "checkmark").click()
+    #time.sleep(2)
 finally:
     time.sleep(100)
