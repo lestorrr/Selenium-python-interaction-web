@@ -45,11 +45,11 @@ try:
     submit_button = WebDriverWait(driver, 10).until
     EC.element_to_be_clickable((By.CLASS_NAME, "active"))
     time.sleep(1)
-#LINK SA ADD COURSE
+#LINK SA ADD COURSE CODEEEEEEEEEE
     driver.get("http://p1wwebd08/lmsv2/course/add")
-#CREATE COURSE EYYYYYY WANANANENG
+#CREATE COURSE CODEEEEEEEEEEEEEEEEE
     driver.find_element(By.NAME, "course_title").click()
-    driver.find_element(By.ID, "course_title").send_keys("automated in python")
+    driver.find_element(By.ID, "course_title").send_keys("test webdriver python")
     time.sleep(2)
     driver.find_element(By.NAME, "course_duration_hrs").click()
     driver.find_element(By.ID, "course_duration_hrs").send_keys(5)
@@ -57,7 +57,18 @@ try:
     driver.find_element(By.NAME, "course_description").click()
     driver.find_element(By.ID, "course_description").send_keys("test on python webdrivers")
     time.sleep(2)
-    EC.element_to_be_clickable((By.CLASS_NAME, "checkmark"))
+#yes or no survey codeeeeeeeee MEOW
+    no_element = driver.find_element(By.XPATH, "//label[contains(.,'No')]")
+    no_element.click()
+    time.sleep(2)
+    span_element = driver.find_element(By.XPATH, "//form[@id='frmAdd']/div[6]/div/label[2]/span")
+    span_element.click()
     time.sleep(1)
+    span_element = driver.find_element(By.XPATH, "//form[@id='frmAdd']/div[8]/div/label[2]/span")
+    span_element.click()
+#SUBMITTTTTTT
+    driver.find_element(By.ID, "btnAddPreview").click()
+    time.sleep(1)
+    driver.find_element(By.ID, "btnAddPreviewSubmit").click()
 finally:
     time.sleep(100)
