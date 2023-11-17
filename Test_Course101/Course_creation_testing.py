@@ -77,7 +77,5 @@ try:
     driver.find_element(By.ID, "btnAddPreview").click()
     time.sleep(1)
     driver.find_element(By.ID, "btnAddPreviewSubmit").click()
-#VIEWCOURSE
-
 finally:
     time.sleep(100)
