@@ -79,5 +79,18 @@ try:
     button_element = driver.find_element(By.ID, "btnAddPreviewSubmit")
     button_element.click()
     time.sleep(1)
+#NEW TASK WITH NEED APPROVAL
+    driver.get("http://p1wwebd08/lmsv2/curriculum/home")
+    time.sleep(1)
+    driver.get("http://p1wwebd08/lmsv2/curriculum/index/readonly")
+    time.sleep(1)
+    driver.get("http://p1wwebd08/lmsv2/curriculum/view/MTAyODE=/readonly")
+    time.sleep(1)
+    driver.find_element(By.ID, "remarks").send_keys("CURRICILUM FOR TESTING 101 WEB DRIVER")
+    time.sleep(1)
+    driver.find_element(By.ID, "btnApprove").click()
+    time.sleep(1)
+    driver.find_element(By.ID, "btnYes").click()
+    time.sleep(1)
 finally:
     time.sleep(100)
