@@ -77,5 +77,8 @@ try:
     driver.find_element(By.ID, "btnAddPreview").click()
     time.sleep(1)
     driver.find_element(By.ID, "btnAddPreviewSubmit").click()
+    time.sleep(1)
+    span_element = driver.find_element(By.XPATH, "//span[@class='checkmark']")
+    span_element.click()
 finally:
     time.sleep(100)
