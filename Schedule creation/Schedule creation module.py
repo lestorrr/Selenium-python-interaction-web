@@ -47,8 +47,7 @@ try:
     
 #TIME AND DATE
     driver.find_element(By.ID, "start_date").click()
-    
-    
+
 
 
     time.sleep(100)
