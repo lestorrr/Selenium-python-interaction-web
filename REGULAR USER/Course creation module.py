@@ -19,10 +19,8 @@ try:
     time.sleep(1)
 
 #HOME KABANATAE
-    driver.execute_script("window.open('http://p1wwebd08/lmsv2/my-curriculum/index');")
+    driver.execute_script("window.open('http://p1wwebd08/lmsv2/course/view/MTA=/readonly');")
     submit_button = WebDriverWait(driver, 10).until
-    driver.find_element(By.XPATH, "xpath=//h3[@id='ui-id-4']").click()
-    time.sleep(1)
 
 finally:
     time.sleep(500)
