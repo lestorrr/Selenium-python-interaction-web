@@ -84,7 +84,7 @@ try:
     time.sleep(1)
     driver.get("http://p1wwebd08/lmsv2/curriculum/index/readonly")
     time.sleep(1)
-    driver.get("http://p1wwebd08/lmsv2/curriculum/view/MTAyODE=/readonly")
+    driver.get("http://p1wwebd08/lmsv2/curriculum/view/MTAyOTU=/readonly")
     time.sleep(1)
     driver.find_element(By.ID, "remarks").send_keys("CURRICILUM FOR TESTING 101 WEB DRIVER")
     time.sleep(1)

@@ -51,7 +51,7 @@ try:
 #CREATE COURSE CODEEEEEEEEEEEEEEEEE
 #TITLE NG COURSE
     driver.find_element(By.NAME, "course_title").click()
-    driver.find_element(By.ID, "course_title").send_keys("Test_Course101_webdriver")
+    driver.find_element(By.ID, "course_title").send_keys("Test_Course101_jmoya")
     time.sleep(2)
 #DURATION NG COURSE
     driver.find_element(By.NAME, "course_duration_hrs").click()
