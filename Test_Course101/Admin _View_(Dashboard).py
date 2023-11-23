@@ -22,11 +22,12 @@ try:
         EC.presence_of_element_located((By.NAME, "password"))
     )
     username_field.send_keys("JMOYA")
+    time.sleep(5)
     password_field.send_keys("Ciana052497!3")
-
+    time.sleep(5)
     submit_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
     )
     submit_button.click()
 finally:
-    time.sleep(100)
+    time.sleep(500)

@@ -43,8 +43,6 @@ try:
     #option_to_select = driver.find_element(By.XPATH, "//li[@id='select2-CourseID-result-1f5u-11']")
     #option_to_select.click()
     time.sleep(1)
-    
-    
 #TIME AND DATE
     driver.find_element(By.ID, "start_date").click()
 
