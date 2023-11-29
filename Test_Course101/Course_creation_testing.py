@@ -82,6 +82,6 @@ try:
     time.sleep(3)
     span_element = driver.find_element(By.XPATH, "//span[@class='checkmark']")
     span_element.click()
-
+#back button
 finally:
     time.sleep(500)

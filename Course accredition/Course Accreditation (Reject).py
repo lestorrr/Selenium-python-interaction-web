@@ -36,7 +36,7 @@ try:
         EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
     )
     submit_button.click()
-    time.sleep(2)
+    time.sleep(3)
 #LINK PATH NG COURSE NA I CREATE
     driver.get("http://p1wwebd08/lmsv2/course/home")
     link = driver.find_elements(By.XPATH, "//a[@href]")
@@ -45,16 +45,16 @@ try:
             driver.execute_script("window.open('http://p1wwebd08/lmsv2/course/home');")
     submit_button = WebDriverWait(driver, 10).until
     EC.element_to_be_clickable((By.CLASS_NAME, "active"))
-    time.sleep(1)
+    time.sleep(3)
 #LINK SA ADD COURSE CODEEEEEEEEEE
     driver.get("http://p1wwebd08/lmsv2/course/accreditation/MTA=")
-    time.sleep(1)
+    time.sleep(3)
 
     span_element = driver.find_element(By.XPATH, "//*[@id='tblAccreditationRequest']/tbody/tr[1]/td[1]/buttton/i")
     span_element.click()
-    time.sleep(1)
+    time.sleep(3)
 
     driver.find_element(By.ID, "btnNo").click()
-    time.sleep(1)
+    time.sleep(3)
 finally:
     time.sleep(100)

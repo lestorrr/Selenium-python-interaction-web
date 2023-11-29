@@ -36,7 +36,7 @@ try:
         EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
     )
     submit_button.click()
-    time.sleep(2)
+    time.sleep(3)
 
     driver.get("http://p1wwebd08/lmsv2/course/add")
 #CREATE COURSE CODEEEEEEEEEEEEEEEEE
@@ -70,9 +70,9 @@ try:
     driver.find_element(By.ID, "btnAddPreviewSubmit").click()
     time.sleep(3)
     span_element = driver.find_element(By.XPATH, "//span[@class='checkmark']")
-    span_element.click()
+    span_element.click(3)
 
-    time.sleep(1)
+    time.sleep(3)
 
     driver.get("http://p1wwebd08/lmsv2/course/index/readonly")
     element = WebDriverWait(driver, 5).until()

@@ -36,7 +36,7 @@ try:
         EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
     )
     submit_button.click()
-    time.sleep(2)
+    time.sleep(3)
 #LINK PATH NG COURSE NA I CREATE
     driver.get("http://p1wwebd08/lmsv2/course/home")
     link = driver.find_elements(By.XPATH, "//a[@href]")
@@ -45,55 +45,55 @@ try:
             driver.execute_script("window.open('http://p1wwebd08/lmsv2/course/home');")
     submit_button = WebDriverWait(driver, 10).until
     EC.element_to_be_clickable((By.CLASS_NAME, "active"))
-    time.sleep(1)
+    time.sleep(3)
 #LINK SA ADD COURSE CODEEEEEEEEEE
     driver.get("http://p1wwebd08/lmsv2/course/add")
 #CREATE COURSE CODEEEEEEEEEEEEEEEEE
 #TITLE NG COURSE
     driver.find_element(By.NAME, "course_title").click()
     driver.find_element(By.ID, "course_title").send_keys("Test_Course102(webdriver)")
-    time.sleep(2)
+    time.sleep(3)
 #DURATION NG COURSE
     driver.find_element(By.NAME, "course_duration_hrs").click()
     driver.find_element(By.ID, "course_duration_hrs").send_keys(5)
-    time.sleep(2)
+    time.sleep(3)
 #DESCRIPTION NG COURSE
     driver.find_element(By.NAME, "course_description").click()
     driver.find_element(By.ID, "course_description").send_keys("Course Return to requestor")
-    time.sleep(2)
+    time.sleep(3)
 #LALAGYAN LANG PO NG HASHTAG PAG YES PO UNG ISESELECT DEFAULT PO KASI YUNG YES KAYA NO NEED TO CODE
 #Is there a pre-requisite course?
     no_element = driver.find_element(By.XPATH, "//label[contains(.,'No')]")
     no_element.click()
-    time.sleep(2)
+    time.sleep(3)
 #Is survey required?
     span_element = driver.find_element(By.XPATH, "//form[@id='frmAdd']/div[6]/div/label[2]/span")
     span_element.click()
-    time.sleep(1)
+    time.sleep(3)
 #Is exam required?
     span_element = driver.find_element(By.XPATH, "//form[@id='frmAdd']/div[8]/div/label[2]/span")
     span_element.click()
 #SUBMITTTTTTT
     driver.find_element(By.ID, "btnAddPreview").click()
-    time.sleep(1)
+    time.sleep(3)
     driver.find_element(By.ID, "btnAddPreviewSubmit").click()
     #LINK PATH NG COURSE NA I CREATE
     driver.get("http://p1wwebd08/lmsv2/course/home")
-    time.sleep(1)
+    time.sleep(3)
 #OTW SA VIEWCOURSE EYY
     driver.get("http://p1wwebd08/lmsv2/course/index/readonly")
-    time.sleep(1)
+    time.sleep(3)
     driver.get("http://p1wwebd08/lmsv2/course/view/Nzc=/readonly")
-    time.sleep(1)
+    time.sleep(3)
 #DESCRIPTION KET ANO
     driver.find_element(By.NAME, "remarks").click()
     driver.find_element(By.ID, "remarks").send_keys("Test_Course101(web-driver)")
-    time.sleep(1)
+    time.sleep(3)
 #CLICKING APPROVED HEHEZ
     driver.find_element(By.ID, "btnReject").click()
-    time.sleep(2)
+    time.sleep(3)
     driver.find_element(By.ID, "btnYes").click()
-    time.sleep(1)
+    time.sleep(3)
 
 finally:
     time.sleep(100)

@@ -16,7 +16,7 @@ try:
     password_field = driver.find_element(By.ID, "sfpassword")
     password_field.send_keys("120313071069")
     driver.find_element(By.XPATH, "//*[@id='frmLMSAccount']/form/button").click()
-    time.sleep(1)
+    time.sleep(3)
 
 #HOME KABANATAE
     driver.execute_script("window.open('http://p1wwebd08/lmsv2/course/view/MTA=/readonly');")
